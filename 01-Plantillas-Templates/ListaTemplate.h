@@ -1,5 +1,5 @@
-#ifndef _LISTA_H_
-#define _LISTA_H_
+#ifndef _LISTATEMPLATE_H_
+#define _LISTATEMPLATE_H_
 
 #include <iostream>
 #include <vector>
@@ -7,13 +7,13 @@
 const int MAX = 100;
 
 template <class T>
-class Lista {
+class ListaTemplate {
   private:
     std::vector<T> data;
     int currentSize;
   public:
-    Lista();
-    ~Lista();
+    ListaTemplate();
+    ~ListaTemplate();
     bool insert(T value);
     void print();
     // To-do Act 1.1
@@ -24,21 +24,21 @@ class Lista {
 };
 
 template <class T>
-Lista<T>::Lista() {
+ListaTemplate<T>::ListaTemplate() {
   std::cout << "Constructor llamado por default " << this << std::endl; 
   data.clear();
   currentSize = 0;
 }
 
 template <class T>
-Lista<T>::~Lista() {
+ListaTemplate<T>::~ListaTemplate() {
   std::cout << "Destructor llamado por default " << this << std::endl;
   data.clear();
   currentSize = 0;
 }
 
 template <class T>
-bool Lista<T>::insert(T value) {
+bool ListaTemplate<T>::insert(T value) {
   if (currentSize < MAX) {
     data.push_back(value);
     currentSize++;
@@ -48,7 +48,7 @@ bool Lista<T>::insert(T value) {
 }
 
 template <class T>
-void Lista<T>::print() {
+void ListaTemplate<T>::print() {
   for (int i = 0; i < currentSize; i++)
     std::cout << "[" << i << "] - " << data[i] << std::endl;
 }
@@ -56,5 +56,5 @@ void Lista<T>::print() {
 
 
 
-#endif // _LISTA_H_
+#endif // _LISTATEMPLATE_H_
 
