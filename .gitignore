@@ -42,6 +42,3 @@
 
 # macos folder view configuration files
 **/.DS_Store
-
-# VisualStudioCode
-.vscode/**/*
