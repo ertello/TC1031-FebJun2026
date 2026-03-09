@@ -1,0 +1,39 @@
+Size: 20
+Print flag: 1
+Los elementos del vector son: 
+113 295 313 430 141 45 5378 14 58 755 81 2 85 1186 88 113 901 93 951 97123 
+Swap sort
+Los elementos del vector ordenado son: 
+2 14 45 58 81 85 88 93 113 113 141 295 313 430 755 901 951 1186 5378 97123 
+	Comparaciones: 190
+	Intercambios: 113
+	Tiempo de ejecución en microsegundos: 29
+Selection sort
+Los elementos del vector ordenado son: 
+2 14 45 58 81 85 88 93 113 113 141 295 313 430 755 901 951 1186 5378 97123 
+	Comparaciones: 190
+	Intercambios: 19
+	Tiempo de ejecución en microsegundos: 27
+Bubble sort
+Los elementos del vector ordenado son: 
+2 14 45 58 81 85 88 93 113 113 141 295 313 430 755 901 951 1186 5378 97123 
+	Comparaciones: 190
+	Intercambios: 102
+	Tiempo de ejecución en microsegundos: 28
+Insertion sort
+Los elementos del vector ordenado son: 
+2 14 45 58 81 85 88 93 113 113 141 295 313 430 755 901 951 1186 5378 97123 
+	Comparaciones: 118
+	Intercambios: 118
+	Tiempo de ejecución en microsegundos: 26
+Merge sort
+Los elementos del vector ordenado son: 
+2 14 45 58 81 85 88 93 113 113 141 295 313 430 755 901 951 1186 5378 97123 
+	Comparaciones: 64
+	Tiempo de ejecución en microsegundos: 45
+Quick sort
+Los elementos del vector ordenado son: 
+2 14 45 58 81 85 88 93 113 113 141 295 313 430 755 901 951 1186 5378 97123 
+	Comparaciones: 68
+	Intercambios: 47
+	Tiempo de ejecución en microsegundos: 27

@@ -1,5 +1,5 @@
 /*
- * Algoritmos de ordenamiento parte 01
+ * Algoritmos de ordenamiento parte 03
  *
  * Compilación con debug:
  *  g++ -std=c++17 *.cpp -Wall -g -o main
@@ -41,6 +41,8 @@ int main(void) {
     }
     // Instancia un objeto de la clase AlgoritmoSort
     SortAlgorithms<int> sortObj;
+    // Mezcla los elementos del vector en forma aleatoria
+    sortObj.randomShuffle(myVector);
     // Ordenamiento del vector utilizando swap sort
     // Inicio conteo de tiempo de ejecución
     auto startTime = std::chrono::high_resolution_clock::now();
@@ -91,6 +93,57 @@ int main(void) {
     cout << "\tTiempo de ejecución en microsegundos: " << duration.count() << endl; 
     // Mezcla los elementos del vector en forma aleatoria
     sortObj.randomShuffle(myVector);
+
+    // Ordenamiento del vector utilizando insertion sort
+    // Inicio conteo de tiempo de ejecución
+    startTime = std::chrono::high_resolution_clock::now();
+    cout << "Insertion sort" << endl;
+    comparaciones = swaps = 0;
+    sortObj.insertionSort(myVector, size, comparaciones, swaps);
+    if (flag)
+        sortObj.printVector(myVector);
+    // Termina conteo de tiempo de ejecución
+    endTime = std::chrono::high_resolution_clock::now();
+    duration = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
+    cout << "\tComparaciones: " << comparaciones << endl;
+    cout << "\tIntercambios: " << swaps << endl;
+    cout << "\tTiempo de ejecución en microsegundos: " << duration.count() << endl; 
+    // Mezcla los elementos del vector en forma aleatoria
+    sortObj.randomShuffle(myVector);
+
+    // Ordenamiento del vector utilizando merge sort
+    // Inicio conteo de tiempo de ejecución
+    startTime = std::chrono::high_resolution_clock::now();
+    cout << "Merge sort" << endl;
+    comparaciones = swaps = 0;
+    sortObj.mergeSort(myVector, 0, size-1, comparaciones);
+    if (flag)
+        sortObj.printVector(myVector);
+    // Termina conteo de tiempo de ejecución
+    endTime = std::chrono::high_resolution_clock::now();
+    duration = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
+    cout << "\tComparaciones: " << comparaciones << endl;
+    cout << "\tTiempo de ejecución en microsegundos: " << duration.count() << endl; 
+    // Mezcla los elementos del vector en forma aleatoria
+    sortObj.randomShuffle(myVector);
+
+    // Ordenamiento del vector utilizando quick sort
+    // Inicio conteo de tiempo de ejecución
+    startTime = std::chrono::high_resolution_clock::now();
+    cout << "Quick sort" << endl;
+    comparaciones = swaps = 0;
+    sortObj.quickSort(myVector, 0, size-1, comparaciones, swaps);
+    if (flag)
+        sortObj.printVector(myVector);
+    // Termina conteo de tiempo de ejecución
+    endTime = std::chrono::high_resolution_clock::now();
+    duration = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime);
+    cout << "\tComparaciones: " << comparaciones << endl;
+    cout << "\tIntercambios: " << swaps << endl;
+    cout << "\tTiempo de ejecución en microsegundos: " << duration.count() << endl; 
+    // Mezcla los elementos del vector en forma aleatoria
+    sortObj.randomShuffle(myVector);
+
 
     return 0;
 }
