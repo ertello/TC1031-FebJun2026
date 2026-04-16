@@ -33,6 +33,12 @@ class BST {
     void inorder();
     void postorder();
     void levelByLevel();
+    // To-do Act 3.1
+    BST(std::vector<T> data); // constructor a partir de un vector
+    int whatlevelamI(T value);
+    T minDifference();
+    std::vector<T> intersection(const BST<T> &other) const;
+    bool operator ==(const BST<T> &other) const;
 };
 
 // O(1)
